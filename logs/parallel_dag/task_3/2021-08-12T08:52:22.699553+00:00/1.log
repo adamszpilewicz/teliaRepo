@@ -1,0 +1,47 @@
+[2021-08-12 10:52:27,929] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag.task_3 2021-08-12T08:52:22.699553+00:00 [queued]>
+[2021-08-12 10:52:27,934] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag.task_3 2021-08-12T08:52:22.699553+00:00 [queued]>
+[2021-08-12 10:52:27,934] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 10:52:27,934] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-12 10:52:27,934] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 10:52:27,944] {taskinstance.py:1107} INFO - Executing <Task(BashOperator): task_3> on 2021-08-12T08:52:22.699553+00:00
+[2021-08-12 10:52:27,945] {standard_task_runner.py:52} INFO - Started process 153855 to run task
+[2021-08-12 10:52:27,949] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'parallel_dag', 'task_3', '2021-08-12T08:52:22.699553+00:00', '--job-id', '44', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/subdag_example.py', '--cfg-path', '/tmp/tmp3k7klub7', '--error-file', '/tmp/tmpg6rx63t4']
+[2021-08-12 10:52:27,950] {standard_task_runner.py:77} INFO - Job 44: Subtask task_3
+[2021-08-12 10:52:27,977] {logging_mixin.py:104} INFO - Running <TaskInstance: parallel_dag.task_3 2021-08-12T08:52:22.699553+00:00 [running]> on host adam
+[2021-08-12 10:52:28,005] {taskinstance.py:1300} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=parallel_dag
+AIRFLOW_CTX_TASK_ID=task_3
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-12T08:52:22.699553+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-12T08:52:22.699553+00:00
+[2021-08-12 10:52:28,005] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-08-12 10:52:28,006] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'ls ~/Documents']
+[2021-08-12 10:52:28,011] {subprocess.py:74} INFO - Output:
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - aion
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - devops
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - docker_test
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - etl
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - GoLand-2021.1.1
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - goWorkspace
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - htmls
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - JOBS
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - kafka
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - languages
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - log-test.log
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - mongodb_files
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - nsq-1.2.0.linux-amd64.go1.12.9
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - nsq-1.2.0.linux-amd64.go1.12.9.tar.gz
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - plugins_zsh
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - projects
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - raspberry_pi
+[2021-08-12 10:52:28,013] {subprocess.py:78} INFO - react
+[2021-08-12 10:52:28,014] {subprocess.py:78} INFO - romaserver
+[2021-08-12 10:52:28,014] {subprocess.py:78} INFO - spark
+[2021-08-12 10:52:28,014] {subprocess.py:78} INFO - terraform-training
+[2021-08-12 10:52:28,014] {subprocess.py:82} INFO - Command exited with return code 0
+[2021-08-12 10:52:28,028] {taskinstance.py:1204} INFO - Marking task as SUCCESS. dag_id=parallel_dag, task_id=task_3, execution_date=20210812T085222, start_date=20210812T085227, end_date=20210812T085228
+[2021-08-12 10:52:28,041] {taskinstance.py:1265} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-08-12 10:52:28,080] {local_task_job.py:149} INFO - Task exited with return code 0
