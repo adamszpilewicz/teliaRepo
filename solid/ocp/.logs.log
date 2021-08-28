@@ -1,0 +1,2 @@
+2021/08/28 10:36:48 AM | uuid: 7e741456-30db-42d3-8867-88d4aeec0e08 | class name: LogutEvent | class data: {'before': {'session': 1}, 'after': {'session': 0}} |
+2021/08/28 10:36:48 AM | uuid: 12ae1f13-82b2-400a-bdf6-f913689171ac | class name: PanicEvent | class data: {'errors_log': 'panic in the line: 12'} |
