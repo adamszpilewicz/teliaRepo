@@ -1,0 +1,49 @@
+[2021-08-12 15:10:17,853] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:10:11.156723+00:00 [queued]>
+[2021-08-12 15:10:17,858] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:10:11.156723+00:00 [queued]>
+[2021-08-12 15:10:17,858] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 15:10:17,858] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-12 15:10:17,858] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 15:10:17,866] {taskinstance.py:1107} INFO - Executing <Task(BashOperator): processing_tasks.jupyter_task.task_1> on 2021-08-12T13:10:11.156723+00:00
+[2021-08-12 15:10:17,868] {standard_task_runner.py:52} INFO - Started process 478838 to run task
+[2021-08-12 15:10:17,871] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'parallel_dag_03', 'processing_tasks.jupyter_task.task_1', '2021-08-12T13:10:11.156723+00:00', '--job-id', '103', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/task_example.py', '--cfg-path', '/tmp/tmprmn21l1s', '--error-file', '/tmp/tmpwxv5u0at']
+[2021-08-12 15:10:17,872] {standard_task_runner.py:77} INFO - Job 103: Subtask processing_tasks.jupyter_task.task_1
+[2021-08-12 15:10:17,894] {logging_mixin.py:104} INFO - Running <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:10:11.156723+00:00 [running]> on host adam
+[2021-08-12 15:10:17,919] {taskinstance.py:1300} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=parallel_dag_03
+AIRFLOW_CTX_TASK_ID=processing_tasks.jupyter_task.task_1
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-12T13:10:11.156723+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-12T13:10:11.156723+00:00
+[2021-08-12 15:10:17,920] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-08-12 15:10:17,920] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'ipython']
+[2021-08-12 15:10:17,926] {subprocess.py:74} INFO - Output:
+[2021-08-12 15:10:18,337] {subprocess.py:78} INFO - /home/adam/.local/lib/python3.9/site-packages/IPython/core/interactiveshell.py:937: UserWarning: Attempting to work in a virtualenv. If you encounter problems, please install IPython inside the virtualenv.
+[2021-08-12 15:10:18,338] {subprocess.py:78} INFO -   warn("Attempting to work in a virtualenv. If you encounter problems, please "
+[2021-08-12 15:10:18,396] {subprocess.py:78} INFO - [22;0t]0;IPython: tmp/airflowtmpz_q6fhh6Python 3.9.5 (default, May 11 2021, 08:20:37)
+[2021-08-12 15:10:18,396] {subprocess.py:78} INFO - Type 'copyright', 'credits' or 'license' for more information
+[2021-08-12 15:10:18,397] {subprocess.py:78} INFO - IPython 7.21.0 -- An enhanced Interactive Python. Type '?' for help.
+[2021-08-12 15:10:18,397] {subprocess.py:78} INFO - 
+[2021-08-12 15:24:46,584] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 478838
+[2021-08-12 15:24:46,584] {taskinstance.py:1284} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-08-12 15:24:46,584] {subprocess.py:88} INFO - Sending SIGTERM signal to process group
+[2021-08-12 15:24:46,589] {taskinstance.py:1501} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1157, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1331, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1361, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/operators/bash.py", line 168, in execute
+    result = self.subprocess_hook.run_command(
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/hooks/subprocess.py", line 76, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1286, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-08-12 15:24:46,591] {taskinstance.py:1544} INFO - Marking task as FAILED. dag_id=parallel_dag_03, task_id=processing_tasks.jupyter_task.task_1, execution_date=20210812T131011, start_date=20210812T131017, end_date=20210812T132446
+[2021-08-12 15:24:46,610] {process_utils.py:66} INFO - Process psutil.Process(pid=478845, status='terminated', started='15:10:17') (478845) terminated with exit code None
+[2021-08-12 15:24:46,611] {process_utils.py:66} INFO - Process psutil.Process(pid=478838, status='terminated', exitcode=1, started='15:10:17') (478838) terminated with exit code 1

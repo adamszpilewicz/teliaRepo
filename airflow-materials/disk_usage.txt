@@ -1,0 +1,19 @@
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           772M  2,6M  769M   1% /run
+/dev/nvme0n1p2  142G  110G   25G  82% /
+tmpfs           3,8G  968K  3,8G   1% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           4,0M     0  4,0M   0% /sys/fs/cgroup
+/dev/nvme0n1p1  511M   42M  470M   9% /boot/efi
+tmpfs           772M  2,1M  770M   1% /run/user/1000
+shm              64M     0   64M   0% /var/snap/microk8s/common/run/containerd/io.containerd.grpc.v1.cri/sandboxes/4537886d3f0160e95efd6990cfef048af1c4c833cb17198f4ad95d8428b18dbd/shm
+overlay         142G  110G   25G  82% /var/snap/microk8s/common/run/containerd/io.containerd.runtime.v2.task/k8s.io/4537886d3f0160e95efd6990cfef048af1c4c833cb17198f4ad95d8428b18dbd/rootfs
+overlay         142G  110G   25G  82% /var/snap/microk8s/common/run/containerd/io.containerd.runtime.v2.task/k8s.io/cc278c9a66d3dcd0508db06f9f6cb09087db43f9e7ad9f9bef83947ea16b34f6/rootfs
+shm              64M     0   64M   0% /var/snap/microk8s/common/run/containerd/io.containerd.grpc.v1.cri/sandboxes/86a1fcb54c82082c8ad98ac507aa4b74a6e58a72667889963bc701d2525e0d95/shm
+overlay         142G  110G   25G  82% /var/snap/microk8s/common/run/containerd/io.containerd.runtime.v2.task/k8s.io/86a1fcb54c82082c8ad98ac507aa4b74a6e58a72667889963bc701d2525e0d95/rootfs
+shm              64M     0   64M   0% /var/snap/microk8s/common/run/containerd/io.containerd.grpc.v1.cri/sandboxes/0c3e4f3c6b18b09308b3613073c6f434b5be43d0757040a90a973920e8bfcb77/shm
+overlay         142G  110G   25G  82% /var/snap/microk8s/common/run/containerd/io.containerd.runtime.v2.task/k8s.io/0c3e4f3c6b18b09308b3613073c6f434b5be43d0757040a90a973920e8bfcb77/rootfs
+shm              64M     0   64M   0% /var/snap/microk8s/common/run/containerd/io.containerd.grpc.v1.cri/sandboxes/04443c0e01a471428b39a3e7d12d71c9de35bceab73124bb30a11d0876ad476d/shm
+overlay         142G  110G   25G  82% /var/snap/microk8s/common/run/containerd/io.containerd.runtime.v2.task/k8s.io/04443c0e01a471428b39a3e7d12d71c9de35bceab73124bb30a11d0876ad476d/rootfs
+overlay         142G  110G   25G  82% /var/snap/microk8s/common/run/containerd/io.containerd.runtime.v2.task/k8s.io/68b506a96e2ad0a735fc3ff99e70160575a13a4f335a9b93946975993ce9bafe/rootfs
+overlay         142G  110G   25G  82% /var/snap/microk8s/common/run/containerd/io.containerd.runtime.v2.task/k8s.io/c88ea8f140606cc2b8f70fa86bc302266fdc3537b74c02b4375ee593933c40e6/rootfs

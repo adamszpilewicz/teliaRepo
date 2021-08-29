@@ -1,0 +1,40 @@
+[2021-08-12 15:08:04,807] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:07:58.389732+00:00 [queued]>
+[2021-08-12 15:08:04,811] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:07:58.389732+00:00 [queued]>
+[2021-08-12 15:08:04,811] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 15:08:04,811] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-12 15:08:04,811] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 15:08:04,818] {taskinstance.py:1107} INFO - Executing <Task(BashOperator): processing_tasks.jupyter_task.task_1> on 2021-08-12T13:07:58.389732+00:00
+[2021-08-12 15:08:04,821] {standard_task_runner.py:52} INFO - Started process 475774 to run task
+[2021-08-12 15:08:04,825] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'parallel_dag_03', 'processing_tasks.jupyter_task.task_1', '2021-08-12T13:07:58.389732+00:00', '--job-id', '95', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/task_example.py', '--cfg-path', '/tmp/tmpwion1e5i', '--error-file', '/tmp/tmpmtvxf_ml']
+[2021-08-12 15:08:04,826] {standard_task_runner.py:77} INFO - Job 95: Subtask processing_tasks.jupyter_task.task_1
+[2021-08-12 15:08:04,845] {logging_mixin.py:104} INFO - Running <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:07:58.389732+00:00 [running]> on host adam
+[2021-08-12 15:08:04,866] {taskinstance.py:1300} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=parallel_dag_03
+AIRFLOW_CTX_TASK_ID=processing_tasks.jupyter_task.task_1
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-12T13:07:58.389732+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-12T13:07:58.389732+00:00
+[2021-08-12 15:08:04,867] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-08-12 15:08:04,867] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'jupyter-lab']
+[2021-08-12 15:08:04,874] {subprocess.py:74} INFO - Output:
+[2021-08-12 15:08:04,991] {subprocess.py:78} INFO - Traceback (most recent call last):
+[2021-08-12 15:08:04,991] {subprocess.py:78} INFO -   File "/home/adam/.local/bin/jupyter-lab", line 5, in <module>
+[2021-08-12 15:08:04,991] {subprocess.py:78} INFO -     from jupyterlab.labapp import main
+[2021-08-12 15:08:04,991] {subprocess.py:78} INFO - ModuleNotFoundError: No module named 'jupyterlab'
+[2021-08-12 15:08:05,002] {subprocess.py:82} INFO - Command exited with return code 1
+[2021-08-12 15:08:05,007] {taskinstance.py:1501} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1157, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1331, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1361, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/adam/.virtualenvs/airflow_telia/lib/python3.9/site-packages/airflow/operators/bash.py", line 176, in execute
+    raise AirflowException('Bash command failed. The command returned a non-zero exit code.')
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code.
+[2021-08-12 15:08:05,009] {taskinstance.py:1544} INFO - Marking task as FAILED. dag_id=parallel_dag_03, task_id=processing_tasks.jupyter_task.task_1, execution_date=20210812T130758, start_date=20210812T130804, end_date=20210812T130805
+[2021-08-12 15:08:05,037] {local_task_job.py:149} INFO - Task exited with return code 1

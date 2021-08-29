@@ -1,0 +1,27 @@
+[2021-08-12 15:30:28,331] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:29:34.600217+00:00 [queued]>
+[2021-08-12 15:30:28,338] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:29:34.600217+00:00 [queued]>
+[2021-08-12 15:30:28,338] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 15:30:28,338] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-12 15:30:28,338] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-12 15:30:28,346] {taskinstance.py:1107} INFO - Executing <Task(BashOperator): processing_tasks.jupyter_task.task_1> on 2021-08-12T13:29:34.600217+00:00
+[2021-08-12 15:30:28,350] {standard_task_runner.py:52} INFO - Started process 504713 to run task
+[2021-08-12 15:30:28,354] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'parallel_dag_03', 'processing_tasks.jupyter_task.task_1', '2021-08-12T13:29:34.600217+00:00', '--job-id', '124', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/task_example.py', '--cfg-path', '/tmp/tmpnzuf7hdk', '--error-file', '/tmp/tmpgu1zwr50']
+[2021-08-12 15:30:28,355] {standard_task_runner.py:77} INFO - Job 124: Subtask processing_tasks.jupyter_task.task_1
+[2021-08-12 15:30:28,374] {logging_mixin.py:104} INFO - Running <TaskInstance: parallel_dag_03.processing_tasks.jupyter_task.task_1 2021-08-12T13:29:34.600217+00:00 [running]> on host adam
+[2021-08-12 15:30:28,396] {taskinstance.py:1300} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=parallel_dag_03
+AIRFLOW_CTX_TASK_ID=processing_tasks.jupyter_task.task_1
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-12T13:29:34.600217+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-12T13:29:34.600217+00:00
+[2021-08-12 15:30:28,397] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-08-12 15:30:28,397] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'echo hello']
+[2021-08-12 15:30:28,403] {subprocess.py:74} INFO - Output:
+[2021-08-12 15:30:28,404] {subprocess.py:78} INFO - hello
+[2021-08-12 15:30:28,404] {subprocess.py:82} INFO - Command exited with return code 0
+[2021-08-12 15:30:28,416] {taskinstance.py:1204} INFO - Marking task as SUCCESS. dag_id=parallel_dag_03, task_id=processing_tasks.jupyter_task.task_1, execution_date=20210812T132934, start_date=20210812T133028, end_date=20210812T133028
+[2021-08-12 15:30:28,429] {taskinstance.py:1265} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-08-12 15:30:28,444] {local_task_job.py:149} INFO - Task exited with return code 0
